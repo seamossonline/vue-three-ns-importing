@@ -5,8 +5,8 @@ import { createRenderer } from "./systems/renderer.js";
 import { Loop } from "./systems/Loop.js";
 import { Resizer } from "./systems/Resizer.js";
 import { createControls } from "./systems/controls.js";
-
 import createTerrain from "./components/objects/terrain.js";
+import { loadCrabs } from './components/crabs.js';
 
 // These variables are module-scoped: we cannot access them
 // from outside the module
@@ -18,6 +18,7 @@ let camera;
 let renderer;
 let scene;
 let loop;
+
 
 class World {
   constructor(container) {
@@ -65,6 +66,12 @@ class World {
       this.render();
     };
   }
+
+  
+  async init() {
+    // inside an async function: OK!
+    await loadCrabs();
+    }
 
   render() {
     // draw a single frame

@@ -31,7 +31,10 @@
   </div>
 </template>
 
+
+
 <script>
+import { loadCrabs } from '../World/components/crabs.js';
 export default {
   data() {
     return {
@@ -68,6 +71,9 @@ export default {
       ],
       index: 0,
     };
+  },
+  components: {
+    loadCrabs,
   },
   methods: {
     async next() {
