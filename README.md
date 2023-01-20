@@ -1,3 +1,6 @@
+*FOLLOWING THIS GUIDE:*
+https://discoverthreejs.com/book/first-steps/load-models/
+
 # Vue + three for Nicasource Insights
 
 An example portfolio made with Vue + Three.js for Nicasource's NS Insights Initiative. 
